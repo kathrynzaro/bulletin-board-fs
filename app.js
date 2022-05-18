@@ -1,6 +1,5 @@
 // import functions and grab DOM elements
-
-// let state
+import { fetchPosts } from "./fetch-utils.js";
 
 // set event listeners 
   // get user input

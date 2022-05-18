@@ -14,3 +14,4 @@ export function renderBulletinPost(post) {
 
     return div;
 }
+
