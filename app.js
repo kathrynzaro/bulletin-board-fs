@@ -1,8 +1,18 @@
 // import functions and grab DOM elements
-import { fetchPosts, signInUser } from "./fetch-utils.js";
-import { renderBulletinPost } from "./render-utils.js";
+import { fetchPosts, logout, getUser } from './fetch-utils.js';
+import { renderBulletinPost } from './render-utils.js';
 // let state
 
+const authButton = document.getElementById('auth-button');
+
+
+async function handleLogout() {
+    await logout();
+}
+
+async function handleAuth() {
+    window.location.href = '/auth';
+}
 
 async function loadData() {
     const posts = await fetchPosts();
@@ -12,8 +22,15 @@ async function loadData() {
         const postDiv = renderBulletinPost(post);
         bulletinBoard.append(postDiv);
     }
+    const user = getUser();
+    if (user) {
+        authButton.textContent = 'logout';
+        authButton.addEventListener('click', handleLogout);
+    } else {
+        authButton.textContent = 'login';
+        authButton.addEventListener('click', handleAuth);
+    }
 }
-
 
 
 loadData();

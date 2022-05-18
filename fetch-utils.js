@@ -7,6 +7,7 @@ export function getUser() {
     return client.auth.session() && client.auth.session().user;
 }
 
+
 export async function fetchPosts() {
     const response = await client.from('posts').select('*');
     console.log(response);
@@ -31,5 +32,14 @@ export async function signUpUser(email, password) {
     }
 }
 
+export async function logout() {
+    await client.auth.signOut();
+    
+    return (window.location.href = '/');
+}
 
-
+export async function redirectIfLoggedIn() {
+    if (getUser()) {
+        location.replace('/');
+    }
+}
