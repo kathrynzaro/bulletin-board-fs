@@ -1,4 +1,4 @@
-import { createPost, checkAuth } from '../fetch-utils.js';
+import { createPost, checkAuth, logout } from '../fetch-utils.js';
 
 checkAuth();
 
@@ -15,4 +15,14 @@ form.addEventListener('submit', async (e) => {
     const response = await createPost(newPost);
     console.log(response);
     location.replace('/');
+});
+
+const home = document.getElementById('home');
+home.addEventListener('click', () => {
+    location.replace('/');
+});
+
+const logoutBtn = document.getElementById('logout');
+logoutBtn.addEventListener('click', () => {
+    logout();
 });
