@@ -52,3 +52,8 @@ export async function createPost(post) {
         console.error(response.error);
     }
 }
+
+export async function checkAuth() {
+    const user = await getUser();
+    if (!user) location.replace('/auth');
+}

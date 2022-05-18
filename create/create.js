@@ -1,4 +1,6 @@
-import { createPost } from '../fetch-utils.js';
+import { createPost, checkAuth } from '../fetch-utils.js';
+
+checkAuth();
 
 const form = document.getElementById('new-post');
 

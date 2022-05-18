@@ -31,11 +31,12 @@ async function loadData() {
         authButton.textContent = 'login';
         authButton.addEventListener('click', handleAuth);
     }
+    createButton.addEventListener('click', () => {
+        location.replace('/create');
+    });
+    
 }
 
-createButton.addEventListener('click', () => {
-    location.replace('/create');
-});
 
 
 loadData();
