@@ -8,3 +8,4 @@ export async function fetchPosts() {
     console.log(response);
     return response.data;
 }
+
