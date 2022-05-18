@@ -22,6 +22,14 @@ export async function signInUser(email, password) {
     }
 }
 
+export async function signUpUser(email, password) {
+    const response = await client.auth.signUp({ email, password });
+    if (response.user) {
+        return response.user;
+    } else {
+        console.error(response.error);
+    }
+}
 
 
 
