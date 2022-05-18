@@ -1,5 +1,5 @@
 // import functions and grab DOM elements
-import { fetchPosts } from "./fetch-utils.js";
+import { fetchPosts, signInUser } from "./fetch-utils.js";
 import { renderBulletinPost } from "./render-utils.js";
 // let state
 
@@ -13,6 +13,8 @@ async function loadData() {
         bulletinBoard.append(postDiv);
     }
 }
+
+
 
 loadData();
 // set event listeners 
