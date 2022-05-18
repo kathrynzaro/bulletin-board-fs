@@ -4,6 +4,7 @@ import { renderBulletinPost } from './render-utils.js';
 // let state
 
 const authButton = document.getElementById('auth-button');
+const createButton = document.getElementById('create');
 
 
 async function handleLogout() {
@@ -31,6 +32,10 @@ async function loadData() {
         authButton.addEventListener('click', handleAuth);
     }
 }
+
+createButton.addEventListener('click', () => {
+    location.replace('/create');
+});
 
 
 loadData();

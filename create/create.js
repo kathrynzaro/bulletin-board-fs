@@ -1,4 +1,4 @@
-
+import { createPost } from '../fetch-utils.js';
 
 const form = document.getElementById('new-post');
 
@@ -10,5 +10,7 @@ form.addEventListener('submit', async (e) => {
         description: data.get('description'),
         author: data.get('author'),
     };
-    
-})
+    const response = await createPost(newPost);
+    console.log(response);
+    location.replace('/');
+});
