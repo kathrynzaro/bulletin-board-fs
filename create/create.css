@@ -5,7 +5,7 @@ html, body {
 }
 
 body {
-    font-family: 'VT323', monospace;
+    font-family: 'Chicle', cursive;
     background-color: white;
     color: black;
 }
@@ -15,7 +15,7 @@ main {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    margin-top: 50px;
 }
 
 header {
@@ -30,17 +30,28 @@ header {
 }
 
 h1 {
-    font-size: 3rem;
+    font-size: 5rem;
     padding: 15px;
+    letter-spacing: 7px;
+    text-transform: capitalize;
 }
 
 button {
-    font-family: 'VT323', monospace;
+    font-family: 'Chicle', cursive;
     margin: 5px;
     border: 2px solid black;
+    border-radius: 5px;
     padding: 10px;
     background-color: #E4E4F6;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.625);
+}
+
+button:hover {
+    opacity: .5;
+    cursor: pointer;
 }
 
 #nav {
@@ -55,15 +66,17 @@ form {
     width: 500px;
     height: 500px;
     background-color: #E4E4F6;
-    padding: 50px;
-    border-radius: 50%;
+    padding: 25px;
+    border-radius: 20%;
     justify-content: center;
     align-items: center;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
 }
 
 label {
-    padding: 10px 0;
-    font-size: 1.2rem;
+    padding: 8px 0;
+    font-size: 1.5rem;
     color: black;
 }
 
@@ -72,18 +85,23 @@ form button {
     background-color: white;
     border: 2px solid black;
     margin-top: 20px;
+    text-transform: uppercase;
+    box-shadow: 1px 5px 5px 1px rgba(0, 0, 0, 0.625);
 }
 
 input {
     font-family: 'VT323', monospace;
+    font-size: 1.2rem;
     background-color: white;
     padding: 7px;
-    margin-bottom: 20px;
-    width: 200px;
+    margin-bottom: 30px;
+    width: 250px;
     border: 2px solid black;
+    border-radius: 5px;
 }
 
 ::placeholder {
     color: #c5c5f3;
 }
+
 
