@@ -76,3 +76,8 @@ h3 {
     margin: 0;
 }
 
+button:hover {
+    opacity: .5;
+    cursor: pointer;
+}
+
