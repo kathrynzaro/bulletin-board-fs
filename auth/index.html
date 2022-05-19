@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Comfortaa:wght@300&family=Great+Vibes&family=IM+Fell+French+Canon&family=IM+Fell+French+Canon+SC&family=Inconsolata:wght@200&family=Josefin+Sans&family=Limelight&family=Poiret+One&family=Press+Start+2P&family=Raleway:wght@100&family=Roboto+Mono:wght@100&family=Space+Mono&family=Tenor+Sans&family=VT323&family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./auth.css">
+    <title>Sign In/Up</title>
+</head>
+<body>
+    <header>
+        <h1>welcome to the void</h1>
+    </header>
+    <main>
+        <div>
+            <h1>sign in</h1>
+            <form id="sign-in">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email-signin" />
+                <label for="password">password</label>
+                <input type="password" name="password" id="password-signin">
+                <button>sign in</button>
+            </form>
+        </div>
+        <div>
+        <h1>sign up</h1>
+            <form id="sign-up">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email-signup" />
+                <label for="password">password</label>
+                <input type="password" name="password" id="password-signup">
+                <button>sign in</button>
+            </form>
+        </div>
+    </main>
+    <script type="module" src="./auth.js"></script>
+</body>
+</html>
